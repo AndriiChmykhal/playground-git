@@ -6,12 +6,15 @@ function switchTree() {
     console.log("a = ", a);
     console.log("b = ", b);
 
-    switch(true) {
-        case a > b:
+    switch(Math.sign(a - b)) {
+        case 1:
             console.log("a > b");
             break;
-        case a < b:
+        case -1:
             console.log("a < b");
+            break;
+        case 0:
+            console.log("a == b");
             break;
         default:
             console.log("a == b");

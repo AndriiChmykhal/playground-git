@@ -9,7 +9,7 @@ function arifmetics() {
 
     console.log(a + b);
 
-    console.log(a + c)
+    console.log(a + c);
 
     console.log(c + d);
 
@@ -18,3 +18,4 @@ function arifmetics() {
 }
 
 arifmetics();
+

@@ -1,7 +1,7 @@
 function switchTree() {
 
-    let a = Math.floor(Math.random() * 100);
-    let b = Math.floor(Math.random() * 100);
+    const a = Math.floor(Math.random() * 100);
+    const b = Math.floor(Math.random() * 100);
 
     console.log("a = ", a);
     console.log("b = ", b);

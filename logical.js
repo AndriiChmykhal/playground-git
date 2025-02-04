@@ -1,10 +1,10 @@
 function logical() {
-    let a = 5;
-    let b = 10;
-    let c = "Hello";
-    let d = 'd';
-    let e = true;
-    let f = false;
+    const a = 5;
+    const b = 10;
+    const c = "Hello";
+    const d = 'd';
+    const e = true;
+    const f = false;
 
     console.log("a > b", a > b);
     console.log("a < b", a < b);

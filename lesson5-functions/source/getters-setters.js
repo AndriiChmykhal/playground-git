@@ -1,32 +1,31 @@
 const user = {
-    firstName: "John",
-    lastName: "Snow",
+    firstName: 'John',
+    lastName: 'Snow',
     age: 30,
     address: {
-        country: "Winterfall",
-        street: "Wall",
+        country: 'Winterfall',
+        street: 'Wall',
         house: 1
     },
 
-    getFirstName () {
+    get FirstName() {
         return this.firstName;
     },
 
-    getLastName () {
+    get LastName() {
         return this.lastName;
     },
 
-    setLastName(lastName) {
+    set LastName(lastName) {
         this.lastName = lastName;
     },
 
-    getFullName() {
-        fullName = this.firstName + " " + this.lastName;
-        return fullName;
+    get FullName() {
+        return (this.firstName + ' ' + this.lastName);
     }
-}
+};
 
-console.log(user.getFirstName());
-console.log(user.getLastName());
-user.setLastName("Stark");
-console.log(user.getFullName());
+console.log(user.FirstName);
+console.log(user.LastName);
+user.LastName = 'Stark';
+console.log(user.FullName);

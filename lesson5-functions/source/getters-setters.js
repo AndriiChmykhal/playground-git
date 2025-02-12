@@ -20,12 +20,12 @@ const user = {
         this.lastName = lastName;
     },
 
-    get FullName() {
+    getFullName() {
         return (this.firstName + ' ' + this.lastName);
     }
 };
 
-console.log(user.FirstName);
-console.log(user.LastName);
+console.log(user.firstName);
+console.log(user.lastName);
 user.LastName = 'Stark';
-console.log(user.FullName);
+console.log(user.getFullName());

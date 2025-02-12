@@ -1,6 +1,6 @@
 const user = {
-    firstName: 'John',
-    lastName: 'Snow',
+    _firstName: 'John',
+    _lastName: 'Snow',
     age: 30,
     address: {
         country: 'Winterfall',
@@ -8,24 +8,25 @@ const user = {
         house: 1
     },
 
-    get FirstName() {
-        return this.firstName;
+    get firstName() {
+        return this._firstName;
     },
 
-    get LastName() {
-        return this.lastName;
+    get lastName() {
+        return this._lastName;
     },
 
-    set LastName(lastName) {
-        this.lastName = lastName;
+    set lastName(lastName) {
+        this._lastName = lastName;
     },
 
-    get FullName() {
+    getFullName() {
         return (this.firstName + ' ' + this.lastName);
     }
 };
 
-console.log(user.FirstName);
-console.log(user.LastName);
-user.LastName = 'Stark';
-console.log(user.FullName);
+console.log(user._firstName);
+console.log(user._lastName);
+user.lastName = 'Stark';
+console.log(user.getFullName());
+

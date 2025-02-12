@@ -29,3 +29,4 @@ console.log(user._firstName);
 console.log(user._lastName);
 user.lastName = 'Stark';
 console.log(user.getFullName());
+

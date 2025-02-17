@@ -26,7 +26,13 @@ function printData(data) {
 }
 
 function printUserId(data) {
-    console.log(`userId:', ${data.userId}`);
+    console.log(`userId:`, data.userId);
 }
 
-fetchData('https://jsonplaceholder.typicode.com/todos/2');
+(async () => {
+    try {
+        await fetchData('https://jsonplaceholder.typicode.com/todos/2');
+    } catch (error) {
+        console.error('Error during execution:', error);
+    }
+})();

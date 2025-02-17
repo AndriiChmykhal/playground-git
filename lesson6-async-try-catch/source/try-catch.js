@@ -6,7 +6,7 @@ async function fetchDataWithFallback(primaryUrl, secondaryUrl) {
             throw new Error(`Primary request failed with status ${response.status}`);
         }
 
-        return await response.json();
+        return response.json();
     } catch (error) {
         console.log(`Primary request failed: ${error.message}. Trying fallback.`);
         try {
@@ -16,17 +16,17 @@ async function fetchDataWithFallback(primaryUrl, secondaryUrl) {
                 throw new Error(`Secondary request failed with status ${fallbackResponse.status}`);
             }
 
-            return await fallbackResponse.json();
+            return fallbackResponse.json();
         } catch (fallbackError) {
-            new Error(`Secondary request failed. Error: ${fallbackError.message}`);
+            throw new Error(`Secondary request failed. Error: ${fallbackError.message}`);
         }
     }
 }
 
-// Example usage
 const primaryUrl = 'https://this-api-does-not-exist.com/data';
 const secondaryUrl = 'https://jsonplaceholder.typicode.com/todos/2';
 
 fetchDataWithFallback(primaryUrl, secondaryUrl)
     .then((data) => console.log('Final response:', data))
     .catch((error) => console.error('Final error:', error.message));
+    
